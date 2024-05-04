@@ -1,4 +1,5 @@
 import json
+import get_data
 
 def average_expenses(file_path: str) -> float:
     """
@@ -10,6 +11,8 @@ def average_expenses(file_path: str) -> float:
     Returns:
         float: average expenses
     """
+    a=list((get_data.get_data(file_path)).values())
+    return sum(a)/len(a)
     pass
 
 # test

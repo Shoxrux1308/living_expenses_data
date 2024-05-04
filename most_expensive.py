@@ -1,4 +1,5 @@
 import json
+import get_data
 
 def most_expensive(file_path: str) -> str:
     """
@@ -10,6 +11,11 @@ def most_expensive(file_path: str) -> str:
     Returns:
         str: most expensive item
     """
+    a=get_data.get_data(file_path)
+    b=(list(a.values()))
+    s=list(a.keys())
+    d=b.index(max(b))
+    return s[d]
     pass
 
 # test

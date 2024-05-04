@@ -1,4 +1,5 @@
 import json
+import get_data
 
 def total_expenses(file_path: str) -> float:
     """
@@ -10,8 +11,9 @@ def total_expenses(file_path: str) -> float:
     Returns:
         float: total expenses
     """
+    a=list((get_data.get_data(file_path)).values())
+    return sum(a)
     pass
-
 
 # test
 file_path = "data.json"
